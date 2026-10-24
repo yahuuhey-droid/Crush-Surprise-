@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>शुभ दीपावली | चेतन साहू जी की तरफ से</title>
+    <meta name="description" content="चेतन साहू जी की तरफ से आप सभी को दीपावली की ढेर सारी शुभकामनाएं। मां लक्ष्मी और भगवान श्री गणेश जी की कृपा सदा बनी रहे।">
+    
+    <!-- Open Graph for WhatsApp / Facebook / Telegram Link Previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="शुभ दीपावली | चेतन साहू जी की तरफ से">
+    <meta property="og:description" content="चेतन साहू जी की तरफ से दीपावली की ढेर सारी शुभकामनाएं। दिव्य दीप दर्शन और आतिशबाजी का आनंद लें!">
+    <meta property="og:image" content="lakshmi-ganesh.jpg">
+    <meta name="theme-color" content="#160634">
+    
+    <!-- Google Fonts: Rozha One, Cinzel Decorative, Poppins, Yatra One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for Continuous Background Rockets & Sparkles -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Ambient Music & Audio Controls -->
+    <div class="audio-control-bar">
+        <button id="musicToggleBtn" class="pill-btn" title="दिव्य संगीत (Divine Ambient Tone)">
+            <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+            <span id="musicText">संगीत चालू करें</span>
+        </button>
+        <button id="soundFxBtn" class="pill-btn active" title="ध्वनि प्रभाव (Sound Effects)">
+            <i class="fa-solid fa-bell"></i>
+        </button>
+    </div>
+
+    <!-- Main Container with Festive Website Border Lights -->
+    <main class="main-content website-framed">
+        <!-- Website Perimeter Fairy Lights Border (वेबसाइट के बॉर्डर पर सजी फेयरी लाइट्स) -->
+        <div class="site-lights-border-wrap" aria-hidden="true">
+            <!-- Top Border Lights of Website -->
+            <div class="site-lights-row site-lights-top">
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+            </div>
+            <!-- Bottom Border Lights of Website -->
+            <div class="site-lights-row site-lights-bottom">
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+            </div>
+            <!-- Left Border Lights of Website -->
+            <div class="site-lights-col site-lights-left">
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+            </div>
+            <!-- Right Border Lights of Website -->
+            <div class="site-lights-col site-lights-right">
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+                <span class="fairy-bulb"></span>
+            </div>
+            <!-- 4 Auspicious Corner Stars -->
+            <div class="site-corner-star c-tl">✦</div>
+            <div class="site-corner-star c-tr">✦</div>
+            <div class="site-corner-star c-br">✦</div>
+            <div class="site-corner-star c-bl">✦</div>
+        </div>
+
+        <!-- Grand Sender Auspicious Banner: Chetan Sahu ji ki taraf se -->
+        <div class="top-chetan-greeting-banner" aria-label="शुभकामना संदेश">
+            <div class="chetan-badge-inner">
+                <span class="sparkle-icon">✦ ✨</span>
+                <span class="chetan-greeting-text">
+                    <strong class="chetan-name">चेतन साहू जी</strong> की तरफ से दीपावली की ढेर सारी शुभकामनाएं
+                </span>
+                <span class="sparkle-icon">✨ ✦</span>
+            </div>
+        </div>
+
+        <!-- Celestial Sky Writing: Aasman me Happy Dipawali -->
+        <div class="sky-illuminated-title" aria-label="Aasman me Happy Dipawali">
+            <span class="sky-sparkle-star">✦ ✨</span>
+            <span class="sky-neon-text">HAPPY DIPAWALI</span>
+            <span class="sky-sparkle-star">✨ ✦</span>
+        </div>
+
+        <!-- Aesthetic Fairy Light Swag between Happy Dipawali and Box -->
+        <div class="sky-aesthetic-lights-swag" aria-hidden="true">
+            <div class="swag-wire"></div>
+            <div class="swag-bulbs-container">
+                <span class="aes-bulb gold delay-0"><span class="bulb-glow"></span></span>
+                <span class="aes-star delay-1">✦</span>
+                <span class="aes-bulb pink delay-2"><span class="bulb-glow"></span></span>
+                <span class="aes-sparkle delay-3">✨</span>
+                <span class="aes-bulb cyan delay-4"><span class="bulb-glow"></span></span>
+                <span class="aes-bulb amber delay-5"><span class="bulb-glow"></span></span>
+                <span class="aes-star delay-6">✦</span>
+                <span class="aes-bulb green delay-7"><span class="bulb-glow"></span></span>
+                <span class="aes-sparkle delay-8">✨</span>
+                <span class="aes-bulb purple delay-9"><span class="bulb-glow"></span></span>
+                <span class="aes-bulb gold delay-10"><span class="bulb-glow"></span></span>
+                <span class="aes-star delay-11">✦</span>
+                <span class="aes-bulb cyan delay-12"><span class="bulb-glow"></span></span>
+                <span class="aes-sparkle delay-13">✨</span>
+                <span class="aes-bulb pink delay-14"><span class="bulb-glow"></span></span>
+                <span class="aes-bulb gold delay-15"><span class="bulb-glow"></span></span>
+            </div>
+        </div>
+
+        <!-- Sanskrit Auspicious Shloka -->
+        <header class="shloka-banner">
+            <!-- Aesthetic Box Top Fairy Lights -->
+            <div class="box-aesthetic-lights" aria-hidden="true">
+                <div class="box-lights-track">
+                    <span class="aes-lamp gold"><i class="fa-solid fa-sparkles"></i></span>
+                    <span class="aes-lamp cyan"><i class="fa-solid fa-star"></i></span>
+                    <span class="aes-lamp pink"><i class="fa-solid fa-sparkles"></i></span>
+                    <span class="aes-lamp amber"><i class="fa-solid fa-star"></i></span>
+                    <span class="aes-lamp green"><i class="fa-solid fa-sparkles"></i></span>
+                    <span class="aes-lamp purple"><i class="fa-solid fa-star"></i></span>
+                    <span class="aes-lamp gold"><i class="fa-solid fa-sparkles"></i></span>
+                    <span class="aes-lamp cyan"><i class="fa-solid fa-star"></i></span>
+                    <span class="aes-lamp pink"><i class="fa-solid fa-sparkles"></i></span>
+                    <span class="aes-lamp amber"><i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+
+            <div class="ornament-divider">
+                <span class="star-motif">✦ ॐ श्री गणेशाय नमः ✦ ॐ महालक्ष्म्यै नमः ✦</span>
+            </div>
+            <p class="sanskrit-verse">
+                शुभं करोति कल्याणम् आरोग्यम् धनसंपदा ।<br>
+                शत्रुबुद्धिविनाशाय दीपज्योतिर्नमोऽस्तु ते ॥
+            </p>
+            <p class="shloka-meaning">
+                "प्रकाश की वह दिव्य ज्योति जो कल्याण, आरोग्य और समृद्धि प्रदान करती है, उसे मेरा नमन।"
+            </p>
+        </header>
+
+        <!-- Dynamic Greeting Header with Animated Moving Rangolis on Sides -->
+        <section class="hero-greeting">
+            <div class="wishes-rangoli-wrapper">
+                <!-- Left Moving Animated Rangoli -->
+                <div class="moving-rangoli-container left-rangoli" role="img" aria-label="सजीव रंगोली">
+                    <div class="rangoli-aura-glow"></div>
+                    <div class="rangoli-layer outer-petals">
+                        <svg viewBox="0 0 200 200" class="rangoli-svg">
+                            <defs>
+                                <linearGradient id="petA_L" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ff007f"/>
+                                    <stop offset="100%" stop-color="#7209b7"/>
+                                </linearGradient>
+                                <linearGradient id="petB_L" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f5d4"/>
+                                    <stop offset="100%" stop-color="#0077b6"/>
+                                </linearGradient>
+                                <linearGradient id="petC_L" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffd700"/>
+                                    <stop offset="100%" stop-color="#ff5400"/>
+                                </linearGradient>
+                                <linearGradient id="petD_L" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#70e000"/>
+                                    <stop offset="100%" stop-color="#008000"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="94" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,5" opacity="0.85"/>
+                            <circle cx="100" cy="100" r="88" fill="none" stroke="#ff007f" stroke-width="2" opacity="0.75"/>
+                            <g transform="translate(100,100)">
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" fill="url(#petA_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(45)" fill="url(#petB_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(90)" fill="url(#petC_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(135)" fill="url(#petD_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(180)" fill="url(#petA_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(225)" fill="url(#petB_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(270)" fill="url(#petC_L)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(315)" fill="url(#petD_L)" stroke="#ffd700" stroke-width="1.2"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="rangoli-layer inner-core">
+                        <svg viewBox="0 0 100 100" class="inner-svg">
+                            <defs>
+                                <radialGradient id="sunGlow_L" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="40%" stop-color="#ffea00"/>
+                                    <stop offset="100%" stop-color="#ff5400"/>
+                                </radialGradient>
+                            </defs>
+                            <g transform="translate(50,50)">
+                                <circle cx="0" cy="0" r="44" fill="none" stroke="#00f5d4" stroke-width="2"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(22.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(67.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(112.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(157.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(202.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(247.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(292.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#ffd700" stroke="#ff007f" stroke-width="1" transform="rotate(337.5)"/>
+                                <circle cx="0" cy="0" r="16" fill="url(#sunGlow_L)" stroke="#fff" stroke-width="1.5"/>
+                                <circle cx="0" cy="0" r="7" fill="#ff0055"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Wishes Text Block (शुभ दीपावली) -->
+                <div class="wishes-center-content">
+                    <h1 class="main-title">
+                        <span class="title-sub">दीपोत्सव के पावन पर्व पर</span>
+                        <span class="golden-gradient-text title-shubh">शुभ दीपावली</span>
+                        <span class="title-en">Happy Dipawali</span>
+                    </h1>
+
+                    <p class="blessing-quote">
+                        "दीपों का यह पावन उत्सव आपके जीवन में सुख, शांति, समृद्धि, उत्तम स्वास्थ्य और मां लक्ष्मी का दिव्य आशीर्वाद लेकर आए।"
+                    </p>
+                </div>
+
+                <!-- Right Moving Animated Rangoli -->
+                <div class="moving-rangoli-container right-rangoli" role="img" aria-label="सजीव रंगोली">
+                    <div class="rangoli-aura-glow"></div>
+                    <div class="rangoli-layer outer-petals reverse">
+                        <svg viewBox="0 0 200 200" class="rangoli-svg">
+                            <defs>
+                                <linearGradient id="petA_R" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f5d4"/>
+                                    <stop offset="100%" stop-color="#0077b6"/>
+                                </linearGradient>
+                                <linearGradient id="petB_R" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ff007f"/>
+                                    <stop offset="100%" stop-color="#7209b7"/>
+                                </linearGradient>
+                                <linearGradient id="petC_R" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#70e000"/>
+                                    <stop offset="100%" stop-color="#008000"/>
+                                </linearGradient>
+                                <linearGradient id="petD_R" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffd700"/>
+                                    <stop offset="100%" stop-color="#ff5400"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="94" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,5" opacity="0.85"/>
+                            <circle cx="100" cy="100" r="88" fill="none" stroke="#00f5d4" stroke-width="2" opacity="0.75"/>
+                            <g transform="translate(100,100)">
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" fill="url(#petA_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(45)" fill="url(#petB_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(90)" fill="url(#petC_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(135)" fill="url(#petD_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(180)" fill="url(#petA_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(225)" fill="url(#petB_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(270)" fill="url(#petC_R)" stroke="#ffd700" stroke-width="1.2"/>
+                                <path d="M 0 -88 Q 22 -58 0 -34 Q -22 -58 0 -88 Z" transform="rotate(315)" fill="url(#petD_R)" stroke="#ffd700" stroke-width="1.2"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="rangoli-layer inner-core reverse">
+                        <svg viewBox="0 0 100 100" class="inner-svg">
+                            <defs>
+                                <radialGradient id="sunGlow_R" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="40%" stop-color="#00f5d4"/>
+                                    <stop offset="100%" stop-color="#ff007f"/>
+                                </radialGradient>
+                            </defs>
+                            <g transform="translate(50,50)">
+                                <circle cx="0" cy="0" r="44" fill="none" stroke="#ffd700" stroke-width="2"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(22.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(67.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(112.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(157.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(202.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(247.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(292.5)"/>
+                                <path d="M 0 -44 Q 14 -24 0 -12 Q -14 -24 0 -44 Z" fill="#00f5d4" stroke="#ff007f" stroke-width="1" transform="rotate(337.5)"/>
+                                <circle cx="0" cy="0" r="16" fill="url(#sunGlow_R)" stroke="#fff" stroke-width="1.5"/>
+                                <circle cx="0" cy="0" r="7" fill="#ffd700"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upper Row of Lit Diyas (दीपों की ऊपर की कतार) -->
+        <div class="festive-diya-stream top-stream" aria-label="दीपमाला">
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+        </div>
+
+        <!-- DIVINE LAKSHMI GANESH DARBAR SECTION -->
+        <section class="divine-darbar-section">
+            <div class="darbar-card">
+                <!-- Golden Arch Temple Crown -->
+                <div class="temple-arch-header">
+                    <div class="hanging-bell left"><i class="fa-solid fa-bell"></i></div>
+                    <div class="arch-shubh-labh">
+                        <span class="badge-text">॥ शुभ ॥</span>
+                        <span class="arch-om">卐</span>
+                        <span class="badge-text">॥ लाभ ॥</span>
+                    </div>
+                    <div class="hanging-bell right"><i class="fa-solid fa-bell"></i></div>
+                </div>
+
+                <!-- Divine Lakshmi Ganesh Sacred Photo with Ornate Golden Border -->
+                <div class="deity-photo-wrapper">
+                    <div class="divine-photo-aura"></div>
+                    <img src="lakshmi-ganesh.jpg" alt="मां लक्ष्मी एवं भगवान श्री गणेश" class="deity-photo">
+                </div>
+
+                <!-- Divine Mantras Scroll -->
+                <div class="darbar-mantra-box">
+                    <p class="mantra-line">॥ ॐ गं गणपतये नमः ॥ ॐ महालक्ष्म्यै नमः ॥</p>
+                    <p class="mantra-sub">सिद्धि-बुद्धि प्रदाता श्री गणेश और धन-वैभव प्रदायिनी मां लक्ष्मी की कृपा आप पर सदैव बनी रहे।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRAND DEEPAVALI DIYA CEREMONY (दीपमालिका - बहुत सारे प्रज्वलित दीये) -->
+        <section class="multi-diyas-section">
+            <div class="diya-altar-pedestal">
+                <div class="pedestal-heading">
+                    <span class="star-accent">✦</span> अखंड दीप प्रज्वलन <span class="star-accent">✦</span>
+                </div>
+
+                <!-- 7 Handcrafted Burning Classical Diyas in Royal Arrangement -->
+                <div class="diyas-row-container">
+                    <!-- Diya 1 (Left) -->
+                    <div class="diya-unit small-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-1">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+
+                    <!-- Diya 2 (Left) -->
+                    <div class="diya-unit medium-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-2">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+
+                    <!-- Diya 3 (Left-Center) -->
+                    <div class="diya-unit medium-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-3">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+
+                    <!-- Diya 4 (GRAND MAHA-DIYA - Center) -->
+                    <div class="diya-unit maha-diya" id="mainMahaDiya" role="button" tabindex="0" title="महादीपक स्पर्श करें">
+                        <!-- Rotating Sacred Mandala -->
+                        <div class="mandala-glow lit">
+                            <svg viewBox="0 0 400 400" class="mandala-svg">
+                                <circle cx="200" cy="200" r="190" stroke="rgba(255,215,0,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="6,4"/>
+                                <circle cx="200" cy="200" r="160" stroke="rgba(255,180,0,0.35)" stroke-width="2" fill="none"/>
+                                <circle cx="200" cy="200" r="130" stroke="rgba(255,215,0,0.4)" stroke-width="1.5" fill="none"/>
+                                <g stroke="rgba(255,200,50,0.5)" stroke-width="1.5" fill="none">
+                                    <path d="M 200 40 Q 230 120 200 200 Q 170 120 200 40 Z"/>
+                                    <path d="M 200 360 Q 230 280 200 200 Q 170 280 200 360 Z"/>
+                                    <path d="M 40 200 Q 120 230 200 200 Q 120 170 40 200 Z"/>
+                                    <path d="M 360 200 Q 280 230 200 200 Q 280 170 360 200 Z"/>
+                                    <path d="M 87 87 Q 150 160 200 200 Q 120 150 87 87 Z"/>
+                                    <path d="M 313 313 Q 250 240 200 200 Q 280 250 313 313 Z"/>
+                                    <path d="M 313 87 Q 240 150 200 200 Q 250 120 313 87 Z"/>
+                                    <path d="M 87 313 Q 160 250 200 200 Q 150 280 87 313 Z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="flame-container lit delay-main">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit grand-aura"></div>
+                    </div>
+
+                    <!-- Diya 5 (Right-Center) -->
+                    <div class="diya-unit medium-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-4">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+
+                    <!-- Diya 6 (Right) -->
+                    <div class="diya-unit medium-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-5">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+
+                    <!-- Diya 7 (Right-most) -->
+                    <div class="diya-unit small-diya" role="button" tabindex="0" title="दीपक स्पर्श करें">
+                        <div class="flame-container lit delay-6">
+                            <div class="flame-outer"></div>
+                            <div class="flame-inner"></div>
+                            <div class="flame-core"></div>
+                        </div>
+                        <div class="diya-clay-pot">
+                            <div class="wick"></div>
+                            <div class="oil-reflection"></div>
+                            <div class="diya-rim"></div>
+                            <div class="diya-body"></div>
+                            <div class="diya-base"></div>
+                        </div>
+                        <div class="aura-glow lit"></div>
+                    </div>
+                </div>
+
+                <div class="interactive-hint">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <span>किसी भी दीपक को स्पर्श कर आतिशबाजी व घंटानाद का आनंद लें</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auspicious WhatsApp & Social Sharing Section -->
+        <section class="festive-share-section" aria-label="शुभकामना संदेश शेयर करें">
+            <div class="festive-share-card">
+                <div class="share-badge-pill">
+                    <span class="share-badge-icon">🪔</span>
+                    <span>अपनों के साथ खुशियां बांटें</span>
+                    <span class="share-badge-icon">✨</span>
+                </div>
+                <h3 class="share-card-title">यह मंगलमय संदेश अपने परिजनों और मित्रों को भेजें</h3>
+                <p class="share-card-desc">
+                    एक क्लिक में <strong>चेतन साहू जी</strong> की तरफ से यह दिव्य दीपोत्सव शुभकामना संदेश व्हाट्सएप पर साझा करें
+                </p>
+                <div class="share-action-buttons">
+                    <button id="whatsappShareBtn" class="share-main-btn wa-share-btn" title="व्हाट्सएप पर शेयर करें">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>व्हाट्सएप पर शेयर करें</span>
+                    </button>
+                    <button id="copyShareLinkBtn" class="share-main-btn copy-share-btn" title="वेबसाइट लिंक कॉपी करें">
+                        <i class="fa-solid fa-copy"></i>
+                        <span id="copyLinkBtnText">लिंक कॉपी करें</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lower Continuous Garland of Lit Diyas (दीपों की निचली अखंड माला) -->
+        <div class="festive-diya-stream bottom-stream" aria-label="दीपमाला">
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+            <div class="stream-diya lit"><div class="mini-flame"></div><div class="mini-pot"></div></div>
+        </div>
+
+        <!-- Classical Festive Footer -->
+        <footer class="classical-footer">
+            <div class="footer-diyas">
+                <span class="mini-diya">🪔</span>
+                <span class="mini-diya">✨</span>
+                <span class="mini-diya">🪔</span>
+                <span class="mini-diya">✨</span>
+                <span class="mini-diya">🪔</span>
+            </div>
+            <p class="copyright-text">
+                ॥ तमसो मा ज्योतिर्गमय — अंधकार से प्रकाश की ओर ॥
+            </p>
+            <p class="sub-footer">
+                मां लक्ष्मी और भगवान श्री गणेश की असीम कृपा से आपका घर-आंगन सुख, समृद्धि और आरोग्य के प्रकाश से सदैव आलोकित रहे।
+            </p>
+        </footer>
+    </main>
+
+    <!-- Floating Quick WhatsApp Share Pill -->
+    <button id="floatingWaShareBtn" class="floating-wa-pill" title="व्हाट्सएप पर शेयर करें" aria-label="व्हाट्सएप पर शेयर करें">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>शेयर करें</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
